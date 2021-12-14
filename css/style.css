@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+body p, body h1, body h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.product {
+  height: 200px;
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.061);
+}
+.product__img {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__img img {
+  width: 100%;
+}
+.product__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.product__details {
+  align-self: flex-start;
+}
+.product__details h2 {
+  padding-bottom: 10px;
+}
+.product:hover {
+  transition: 0.2s;
+  transform: scale(1.1, 1.1);
+}
+
+.tracker {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5vw;
+}
+.tracker__checkpoint {
+  position: relative;
+}
+.tracker__checkpoint.done .tracker__flag {
+  background-color: orange;
+}
+.tracker__checkpoint.done .tracker__flag i {
+  display: block;
+}
+.tracker__checkpoint.done .tracker__flag::after {
+  background-color: orange;
+}
+.tracker__checkpoint:last-child .tracker__flag::after {
+  display: none;
+}
+.tracker__flag {
+  background-color: #aaa;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tracker__flag i {
+  display: none;
+}
+.tracker__flag::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(100%, -50%);
+  width: 5vw;
+  height: 3px;
+  background-color: #aaa;
+}
+.tracker__text {
+  position: absolute;
+  font-size: 8px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  bottom: -10px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
